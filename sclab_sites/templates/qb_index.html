@@ -1,0 +1,195 @@
+{% extends "qb_base.html" %}
+{% block title %} - Home{% endblock %}
+
+{% block content %}
+    <script>
+        $(document).ready(function() {
+            $("#organisms").change(function() {
+                $.ajax({
+                    type: "POST",
+                    url: "/quadbase/get_assembly",
+                    data: JSON.stringify({'organism': $("#organisms").val()}),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        var options, index, select, option;
+                        select = document.getElementById('assemblies');
+                        select.options.length = 0;
+                        options = data.assemblies;
+                        for (index = 0; index < options.length; ++index) {
+                          option = options[index];
+                          select.options.add(new Option(option, option));
+                        }
+                    },
+                    error: function (a,b,c) {
+                        alert( c );
+                    }
+                });
+            });
+            $("#assemblies").change(function() {
+                $.ajax({
+                    type: "POST",
+                    url:  "/quadbase/get_genes",
+                    data: JSON.stringify({'db': $("#assemblies").val()}),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        var options, index, select, option;
+                        select = document.getElementById('gene');
+                        select.options.length = 0;
+                        options = data.gene_list;
+                        for (index = 0; index < options.length; ++index) {
+                          option = options[index];
+                          select.options.add(new Option(option, option));
+                        }
+                    },
+                    error: function (a,b,c) {
+                        alert( c );
+                    }
+                });
+            });
+        });
+       $(document).ready(function() {
+            $("#organisms").change(function() {
+                $.ajax({
+                    type: "POST",
+                    url:  "/quadbase/get_assemblies",
+                    data: JSON.stringify({'organism': $("#organisms").val()}),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        var options, index, select, option;
+                        select = document.getElementById('assemblies');
+                        select.options.length = 0;
+                        options = data.assemblies;
+                        for (index = 0; index < options.length; ++index) {
+                          option = options[index];
+                          select.options.add(new Option(option, option));
+                        }
+                    },
+                    error: function (a,b,c) {
+                        alert( c );
+                    }
+                });
+            });
+             $("#assemblies").change(function() {
+                $.ajax({
+                    type: "POST",
+                    url:  "/quadbase/get_genes",
+                    data: JSON.stringify({'db': $("#assemblies").val()}),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        var options, index, select, option;
+                        select = document.getElementById('gene');
+                        select.options.length = 0;
+                        options = data.gene_list;
+                        for (index = 0; index < options.length; ++index) {
+                          option = options[index];
+                          select.options.add(new Option(option, option));
+                        }
+                    },
+                    error: function (a,b,c) {
+                        alert( c );
+                    }
+                });
+            });
+        });
+    </script>
+
+    <form name="" action="" method="post" enctype=multipart/form-data>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <h5>{{ user_input_form.userseq.label }}</h5>
+                    {{ user_input_form.userseq(class="input text", rows=5, cols=55) }}<br>
+                    {{ user_input_form.fastafile.label }}{{ user_input_form.fastafile() }}<br>
+                </div>
+            </div>
+        </div>
+        {{ user_input_form.hidden_tag() }}
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ gene_form.organisms.label }}</h5>
+                    {{ gene_form.organisms(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ gene_form.assemblies.label }}</h5>
+                    {{ gene_form.assemblies(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ gene_form.gene.label }}</h5>
+                    {{ gene_form.gene(class="form-control") }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ gene_form.promoter_up.label }}</h5>
+                    {{ gene_form.promoter_up(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ gene_form.promoter_down.label }}</h5>
+                    {{ gene_form.promoter_down(class="form-control") }}
+                </div>
+            </div>
+        </div>
+        {{ gene_form.hidden_tag() }}
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ g4_form.stem.label }}</h5>
+                    {{ g4_form.stem(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ g4_form.loop_min.label }}</h5>
+                    {{ g4_form.loop_min(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ g4_form.loop_max.label }}</h5>
+                    {{ g4_form.loop_max(class="form-control") }}
+                </div>
+            </div>
+        </div>
+        <div class= "row">
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ g4_form.strand.label }}</h5>
+                    {{ g4_form.strand(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ g4_form.overlapping_quads.label }} {{ g4_form.overlapping_quads(class="form-control") }}</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ g4_form.maximize_quads.label }} {{ g4_form.maximize_quads(class="form-control") }}</h5>
+                </div>
+            </div>
+        </div>
+        {{ g4_form.hidden_tag() }}
+
+        <div class= "row">
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-warning">submit</button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

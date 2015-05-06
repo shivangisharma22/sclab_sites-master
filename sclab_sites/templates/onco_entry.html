@@ -1,0 +1,54 @@
+{% extends "onco_base.html" %}
+
+{% block navbar %}
+      <div class="collapse navbar-collapse">
+            <form class="navbar-form navbar-right" action="{{url_for('onco_logout')}}">
+                  <input type="submit" class="btn btn-warning" value="Logout">
+            </form>
+      </div>
+
+{% endblock %}
+
+{% block content %}
+    <div class="alert alert-success">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }} </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    <h3>Please enter the details of collected tumour sample in the form below.</h3>
+    <h3></h3>
+
+    {% macro render_field(field) %}
+        <div class="row">
+            <div class="col-sm-3" align="right"><h5>{{ field.label }}</h5></div>
+            <div class="col-sm-3">{{ field(class="form-control")}}</div>
+        </div>
+        {% if field.errors %}
+            <ul class=errors>
+                {% for error in field.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+    {% endmacro %}
+
+    <form action="" method="post" name="entry">
+        {{ form.hidden_tag() }}
+        {% for field in form if field.widget.input_type != 'hidden' %}
+            {{ render_field(field) }}
+        {% endfor %}
+        <div class="row">
+            <div class="col-sm-2" align="right">
+                <button class="btn btn-success btn-block" type="submit">Submit to Database</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

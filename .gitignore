@@ -1,0 +1,16 @@
+.idea/
+__init__.pyc
+config.pyc
+oncotyping/__init__.pyc
+oncotyping/onco_forms.pyc
+oncotyping/onco_models.pyc
+oncotyping/onco_views.pyc
+oncotyping/onco_admin.pyc
+quadbase/__init__.pyc
+quadbase/config.pyc
+quadbase/qb_forms.pyc
+quadbase/qb_views.pyc
+quadbase/quad_finder.pyc
+quadbase/utilities.pyc
+quadbase/ucsc_gene.pyc
+indiafightasthma/ifa_views.pyc

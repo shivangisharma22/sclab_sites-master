@@ -1,0 +1,52 @@
+{% extends "onco_base.html" %}
+
+{% block content %}
+
+    <form class="form-signin" action="" method="post" name="onco_login">
+        {{ form.hidden_tag() }}
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-3">
+                <h2 class="form-signin-heading">Please sign in</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-3">
+                {{ form.username(class="form-control", placeholder="Oncotyping username") }}
+            </div>
+            <div class="col-sm-3 help-block">
+                {% for error in form.username.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-3">
+                {{ form.password(class="form-control", placeholder="Password") }}
+            </div>
+            <div class="col-sm-3 help-block">
+                {% for error in form.password.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-3">
+                <p> {{ form.remember_me }} Remember Me </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-3">
+                <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+            </div>
+        </div>
+
+    </form>
+
+{% endblock %}
+
+

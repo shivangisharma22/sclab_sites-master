@@ -1,0 +1,38 @@
+{% extends "qb_base.html" %}
+{% block title %} - Result{% endblock %}
+
+{% block content %}
+    <div class = "row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="well" style="font-family : monospace; background-color: rgb(255,255,255);
+                                                            max-height: 300px; overflow-y: auto;">
+                {% for seq in sequence %}
+                    {{ seq|safe }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class = "row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table table-hover">
+                <caption>Following G4 motifs were found</caption>
+                <thead>
+                    <tr>
+                        <th>Gene Name</th><th>Start</th><th>End</th><th>Length</th><th>Signature</th><th>Sequence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for col in quads %}
+                    <tr>
+                        <td>{{col[0]}}</td><td>{{col[1]}}</td><td>{{col[2]}}</td>
+                        <td>{{col[3]}}</td><td>{{col[4]}}</td><td>{{col[5]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

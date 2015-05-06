@@ -1,0 +1,207 @@
+{  
+    "vertebrates":{
+        "***********************************":[
+        ], 
+        "Ailuropoda melanoleuca":[  
+            "ailMel1"
+        ],
+        "Alligator mississippiensis":[  
+            "allMis1"
+        ],
+        "Anolis carolinensis":[  
+            "anoCar1",
+            "anoCar2"
+        ],
+        "Anopheles gambiae":[  
+            "anoGam1"
+        ],
+        "Apis mellifera":[  
+            "apiMel2"
+        ],
+        "Bos taurus":[  
+            "bosTau3",
+            "bosTau4",
+            "bosTau6",
+            "bosTau7"
+        ],
+        "Callithrix jacchus":[  
+            "calJac1",
+            "calJac3"
+        ],
+        "Canis lupus familiaris":[  
+            "canFam1",
+            "canFam2",
+            "canFam3"
+        ],
+        "Cavia porcellus":[  
+            "cavPor3"
+        ],
+        "Caenorhabditis elegans":[  
+            "ce10",
+            "ce2",
+            "ce4",
+            "ce6"
+        ],
+        "Choloepus hoffmanni":[  
+            "choHof1"
+        ],
+        "Ciona intestinalis":[  
+            "ci1",
+            "ci2"
+        ],
+        "Cricetulus griseus":[  
+            "criGri1"
+        ],
+        "Dasypus novemcinctus":[  
+            "dasNov3"
+        ],
+        "Dipodomys ordii":[  
+            "dipOrd1"
+        ],
+        "Echinops telfairi":[  
+            "echTel1"
+        ],
+        "Equus caballus":[  
+            "equCab1",
+            "equCab2"
+        ],
+        "Erinaceus europaeus":[  
+            "eriEur1"
+        ],
+        "Felis catus":[  
+            "felCat3",
+            "felCat4",
+            "felCat5"
+        ],
+        "Takifugu rubripes":[  
+            "fr1",
+            "fr2",
+            "fr3"
+        ],
+        "Gadus morhua":[  
+            "gadMor1"
+        ],
+        "Gallus gallus":[  
+            "galGal2",
+            "galGal3",
+            "galGal4"
+        ],
+        "Gasterosteus aculeatus":[  
+            "gasAcu1"
+        ],
+        "Gorilla gorilla":[  
+            "gorGor3"
+        ],
+      
+        "Latimeria chalumnae":[  
+            "latCha1"
+        ],
+        "Loxodonta africana":[  
+            "loxAfr3"
+        ],
+        "Microcebus murinus":[  
+            "micMur1"
+        ],
+        "Monodelphis domestica":[  
+            "monDom4",
+            "monDom5"
+        ],
+        "Mustela putorius furo":[  
+            "musFur1"
+        ],
+        "Myotis lucifugus":[  
+            "myoLuc2"
+        ],
+        "Nomascus leucogenys":[  
+            "nomLeu1"
+        ],
+        "Ochotona princeps":[  
+            "ochPri2"
+        ],
+        "Oreochromis niloticus":[  
+            "oreNil2"
+        ],
+        "Ornithorhynchus anatinus":[  
+            "ornAna1"
+        ],
+        "Oryctolagus cuniculus":[  
+            "oryCun2"
+        ],
+        "Oryzias latipes":[  
+            "oryLat2"
+        ],
+        "Otolemur garnettii":[  
+            "otoGar3"
+        ],
+        "Ovis aries":[  
+            "oviAri1",
+            "oviAri3"
+        ],
+        "Pan troglodytes":[  
+            "panTro1",
+            "panTro2",
+            "panTro3",
+            "panTro4"
+        ],
+        "Papio anubis":[  
+            "papAnu2"
+        ],
+        "Papio hamadryas":[  
+            "papHam1"
+        ],
+        "Petromyzon marinus":[  
+            "petMar2"
+        ],
+        "Pongo pygmaeus abelii":[  
+            "ponAbe2"
+        ],
+        "Procavia capensis":[  
+            "proCap1"
+        ],
+        "Pteropus vampyrus":[  
+            "pteVam1"
+        ],
+        "Macaca mulatta":[  
+            "rheMac2",
+            "rheMac3"
+        ],
+        "Sarcophilus harrisii":[  
+            "sarHar1"
+        ],
+        "Sorex araneus":[  
+            "sorAra1"
+        ],
+        "Spermophilus tridecemlineatus":[  
+            "speTri2"
+        ],
+        "Strongylocentrotus purpuratus":[  
+            "strPur2"
+        ],
+        "Sus scrofa":[  
+            "susScr2",
+            "susScr3"
+        ],
+        "Taeniopygia guttata":[  
+            "taeGut1",
+            "taeGut2"
+        ],
+        "Tarsius syrichta":[  
+            "tarSyr1"
+        ],
+        "Tetraodon nigroviridis":[  
+            "tetNig1",
+            "tetNig2"
+        ],
+        "Tupaia belangeri":[  
+            "tupBel1"
+        ],
+        "Vicugna pacos":[  
+            "vicPac2"
+        ],
+        "Xenopus tropicalis":[  
+            "xenTro2",
+            "xenTro3"
+        ]
+    }
+}
+

@@ -1,0 +1,2 @@
+(x, x) for x in assemblies_data['vertebrates'].keys(): x[4:].sort()
+dict(chain.from_iterable(d.keys() for d in (assemblies2_data['vertebrates'],sorted(assemblies_data['vertebrates']))))

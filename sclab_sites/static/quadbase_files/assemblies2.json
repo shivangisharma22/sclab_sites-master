@@ -1,0 +1,43 @@
+{  
+    "vertebrates":{ 
+        "Homo sapiens":[  
+            "hg19",
+            "hg16",
+            "hg17",
+            "hg18",
+            "hg38"
+        ],
+         "Mus musculus":[  
+            "mm10",
+            "mm5",
+            "mm6",
+            "mm7",
+            "mm9"
+        ],
+        "Danio rerio":[  
+            "danRer1",
+            "danRer2",
+            "danRer3",
+            "danRer4",
+            "danRer5",
+            "danRer6",
+            "danRer7"
+        ],
+        "Drosophila melanogaster":[  
+            "dm1",
+            "dm2",
+            "dm3"
+        ],
+         "Saccharomyces cerevisiae":[  
+            "sacCer1",
+            "sacCer2",
+            "sacCer3"
+        ],
+        "Rattus norvegicus":[  
+            "rn3",
+            "rn4",
+            "rn5",
+            "rn6"
+        ]
+        }
+}

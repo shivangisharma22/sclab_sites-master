@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% block head %}
+            <title>QuadBase 2.0{% block title %}{% endblock %}</title>
+            <meta name="author" content="Parashar Dhapola">
+            <meta charset="utf-8">
+            <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+            <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+            <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+            <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% endblock %}
+	</head>
+	<body class="container-fluid">
+		<div class="navbar navbar-static-top navbar-default">
+            <div class="container">
+                <a class="navbar-brand" href="/quadbase">QuadBase</a>
+                {% block navbar %}
+                {% endblock %}
+            </div>
+        </div>
+		<div class="container page">
+				<div class="content">
+					{% block content %}
+					{% endblock %}
+				</div>
+				<hr>
+
+				{% block footer %}
+				<footer class="footer">
+					<div align="center">
+
+					</div>
+				</footer>
+				{% endblock %}
+		</div>
+	</body>
+</html>

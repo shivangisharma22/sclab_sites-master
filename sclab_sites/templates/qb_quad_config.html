@@ -1,0 +1,66 @@
+{% extends "qb_base.html" %}
+{% block title %} - Configure quadruplex search{% endblock %}
+
+{% block content %}
+    <form action="" method="post" enctype=multipart/form-data>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ form.promoter_up.label }}</h5>
+                    {{ form.promoter_up(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ form.promoter_down.label }}</h5>
+                    {{ form.promoter_down(class="form-control") }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ form.stem.label }}</h5>
+                    {{ form.stem(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ form.loop_min.label }}</h5>
+                    {{ form.loop_min(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ form.loop_max.label }}</h5>
+                    {{ form.loop_max(class="form-control") }}
+                </div>
+            </div>
+        </div>
+        <div class= "row">
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ form.strand.label }}</h5>
+                    {{ form.strand(class="form-control") }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ form.overlapping_quads.label }} {{ form.overlapping_quads(class="form-control") }}</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="well">
+                    <h5>{{ form.maximize_quads.label }} {{ form.maximize_quads(class="form-control") }}</h5>
+                </div>
+            </div>
+        </div>
+        <div class= "row">
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-warning">Show Quadruplexes</button>
+            </div>
+        </div>
+
+        {{ form.hidden_tag() }}
+    </form>
+{% endblock %}
